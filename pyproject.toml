@@ -1,0 +1,47 @@
+[project]
+name = "lakeflush"
+dynamic = ["version"]
+description = "lakeflush optimizes data lakes by consolidating small files into larger bundles for big data workloads. Reduces storage overhead and improves processing efficiency."
+authors = [
+    {name = "Abhinav Kaurav", email = "dev@cloudindus.com"},
+]
+license = "Apache-2.0"
+license-files = ["LICEN[CS]E*"]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+   "watchdog==6.0.0"
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Utilities"
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "lakeflush.version.__version__"}
+
+[project.urls]
+homepage = "https://github.com/cloudindus-com/lakeflush"
+source = "https://github.com/cloudindus-com/lakeflush"
+issues = "https://github.com/cloudindus-com/lakeflush/issues"
+
+[project.optional-dependencies]
+aws = [
+    "boto3==1.38.13"
+]
+test = [
+    "pytest >=7.4.0",
+    "pytest-cov >=3.0.0",
+    "pytest-mock >=3.9.0"
+]
