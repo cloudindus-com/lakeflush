@@ -1,0 +1,13 @@
+__pycache__
+.pycrypto
+.pypirc
+env
+.vscode
+.pytest_cache
+dist
+local
+*.egg-info
+.coverage
+build
+dist
+NOTE.md
